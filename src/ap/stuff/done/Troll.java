@@ -1,4 +1,4 @@
-package ap.stuff;
+package ap.stuff.done;
 public class Troll {
     static double treasury;
     double myMoney;

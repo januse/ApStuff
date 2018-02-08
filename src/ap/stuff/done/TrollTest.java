@@ -1,4 +1,4 @@
-package ap.stuff;
+package ap.stuff.done;
 public class TrollTest {
     public static void main(String args []) {
         Troll bobby = new Troll();
