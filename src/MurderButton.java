@@ -6,6 +6,7 @@ public class MurderButton implements PushButton{
     String[][] first = new String[7][20];
     String[][] last = new String[7][10];
     String[] death = new String[20];
+    String status = new String();
     public MurderButton() {
         first[0][1] = "Jake";
         first[0][2] = "Connor";
@@ -243,12 +244,10 @@ public class MurderButton implements PushButton{
         death[19] = "smote by God himself";
     }
     public void push() {
-        System.out.println(firstName() + " " + lastName() + " was " + methodOfDeath());
-        System.out.println("And it's all because YOU pressed the button!");
+        status = (firstName() + " " + lastName() + " was " + methodOfDeath() + ". And it's all because YOU pressed the button!");
     }
     public String buttonState(){
-        
-        return("Dungus");
+        return(status);
     }
     private String firstName() {
         race = rnd.nextInt(7);
