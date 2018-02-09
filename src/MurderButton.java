@@ -250,21 +250,21 @@ public class MurderButton implements PushButton{
         
         return("Dungus");
     }
-    public String firstName() {
+    private String firstName() {
         race = rnd.nextInt(7);
         int name = rnd.nextInt(20);
         return(first[race][name]);
     }
-    public String lastName() {
+    private String lastName() {
         if (race == 0 || race == 1) {
             race = rnd.nextInt(2);
         }
         int name = rnd.nextInt(10);
         return(last[race][name]);
     }
-    public String methodOfDeath() {
-        
-        return("Jim");
+    private String methodOfDeath() {
+        int ded = rnd.nextInt(20);
+        return(death[ded]);
     }
     
 }
