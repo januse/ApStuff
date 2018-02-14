@@ -14,14 +14,17 @@ public class Matrix {
     public void set (int row, int column, double value) throws MatrixException {
         if (row >= rowCount || column >= columnCount) {
             throw new MatrixException("That position doesn't exist in this Matrix");
-        } else {
-            it[row][column] = value;
+        } else if (row < 0 || column < 0) {
+            throw new MatrixException("That position doesn't exist in this Matrix"); 
         }
+        it[row][column] = value;
     }
     
     public double get (int row, int column) throws MatrixException {
         if (row >= rowCount || column >= columnCount) {
             throw new MatrixException("That position doesn't exist in this Matrix");
+        } else if (row < 0 || column < 0) {
+            throw new MatrixException("That position doesn't exist in this Matrix"); 
         }
         return it[row][column];
     }
