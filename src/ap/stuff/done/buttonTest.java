@@ -1,3 +1,5 @@
+package ap.stuff.done;
+
 public class buttonTest {
     public static void main (String args []) {
         MurderButton butt = new MurderButton();

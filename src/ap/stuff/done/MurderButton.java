@@ -1,3 +1,5 @@
+package ap.stuff.done;
+
 import java.util.Random;
 
 public class MurderButton implements PushButton{

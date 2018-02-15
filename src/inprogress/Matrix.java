@@ -33,11 +33,26 @@ public class Matrix {
         if (a.rowCount != b.rowCount || a.columnCount != b.columnCount) {
             throw new MatrixException("That position doesn't exist in this Matrix");
         }
-        boolean empty = true;
-        
-        
-        
-        
+        Matrix c = new Matrix(a.rowCount, a.columnCount);
+        for(int x = 0; x < c.rowCount; x ++) {
+            for(int y = 0; y < c.columnCount; y ++) {
+                c.set(x,y, (a.get(x,y) + b.get(x,y)));
+            } 
+        }
+        return c;
+    }
+    
+    public static Matrix subtract (Matrix a, Matrix b) throws MatrixException {
+        if (a.rowCount != b.rowCount || a.columnCount != b.columnCount) {
+            throw new MatrixException("That position doesn't exist in this Matrix");
+        }
+        Matrix c = new Matrix(a.rowCount, a.columnCount);
+        for(int x = 0; x < c.rowCount; x ++) {
+            for(int y = 0; y < c.columnCount; y ++) {
+                c.set(x,y, (a.get(x,y) - b.get(x,y)));
+            } 
+        }
+        return c;
     }
 
     
